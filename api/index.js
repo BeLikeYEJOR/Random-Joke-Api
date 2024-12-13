@@ -1,9 +1,12 @@
 const express = require("express");
 const { joke } = require("../jokes.js");
+const cors = require("cors");
 
 let app = express();
 
 const foods = { 1: "banana", 2: "Apple", 3: "Orange", 4: "Mandarin" };
+
+app.use(cors());
 
 app.get("/random-joke", (req, res) => {
   let newjoke = joke[Math.floor(Math.random() * joke.length)];
