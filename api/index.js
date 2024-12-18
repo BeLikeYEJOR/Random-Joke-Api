@@ -1,5 +1,5 @@
 const express = require("express");
-const { joke } = require("../jokes.js");
+const joke = require("./data/jokes.json");
 const cors = require("cors");
 
 let app = express();
