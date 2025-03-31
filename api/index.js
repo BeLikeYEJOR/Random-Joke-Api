@@ -16,8 +16,10 @@ app.get("/random-joke", (req, res) => {
 app.get("/global-jokes", (req, res) => {
   const requestData = req.body;
   console.log("resieved data: ", requestData);
-  res.status(201).json({ message: "Data received successfully", data: requestData })
-})
+  res
+    .status(201)
+    .json({ message: "Data received successfully", data: requestData });
+});
 
 app.get("/jokes", (req, res) => {
   res.json({ jokes: joke });
@@ -28,7 +30,7 @@ app.get("/greeting", (req, res) => {
   res.json({ greeting: "Heyy man" });
 });
 
-app.get("/foods", (req, res) => {
+app.post("/foods", (req, res) => {
   res.json({ foods: foods });
 });
 
