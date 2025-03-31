@@ -13,6 +13,12 @@ app.get("/random-joke", (req, res) => {
   res.json({ joke: newjoke });
 });
 
+app.get("/global-jokes", (req, res) => {
+  const requestData = req.body;
+  console.log("resieved data: ", requestData);
+  res.status(201).json({ message: "Data received successfully", data: requestData })
+})
+
 app.get("/jokes", (req, res) => {
   res.json({ jokes: joke });
 });
