@@ -7,7 +7,7 @@ let app = express();
 const foods = { 1: "banana", 2: "Apple", 3: "Orange", 4: "Mandarin" };
 
 app.use(cors());
-app.use(express.json()); // Add middleware to parse JSON bodies
+// app.use(express.json()); // Add middleware to parse JSON bodies
 
 app.get("/random-joke", (req, res) => {
   let newjoke = joke[Math.floor(Math.random() * joke.length)];
